@@ -22,14 +22,15 @@ function Stage1() {
 
   return (
     <div class="stage1-wrapper">
-      <h2>welcom to stage1</h2>
+      <h2>welcome to stage1</h2>
       <div class="stage1-container">
+        <Map />
         <aside>
           <div>
             <Link to="/">home</Link>
           </div>
         </aside>
-        <Map />
+        
       </div>
     </div>
   )
