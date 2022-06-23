@@ -9,8 +9,10 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Main />}/>
-        <Route path="/stage" element={<StageSelect />} />
-        <Route path="/stage/1" element={<Stage1 />} />
+        <Route path="/stage" element={<StageSelect />} >
+        </Route>
+        <Route path="stage/1" element={<Stage1 />} />
+        <Route path="*" element={<div>ErrorPage</div>} />
       </Routes>
     </Router>
   );
