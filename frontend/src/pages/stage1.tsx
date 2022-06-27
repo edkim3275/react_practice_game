@@ -3,19 +3,31 @@ import { Link } from "react-router-dom";
 import Cell from "../components/stage1/Cell";
 
 const createMap = () => {
+    const n = 11;
+    let mapLst = new Array;
+    for (let i = 0; i < n; i++) {
+        let line = [];
+        for (let j = 0; j < n; j++) {
+            line.push(0)
+        }
+        mapLst.push(line);
+    }
+    mapLst[1][2] = 1; mapLst[4][5] = 1; mapLst[3][8] = 1;
+    mapLst[5][3] = 1; mapLst[8][9] = 1; mapLst[10][0] = 1;
+    mapLst.push([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2])
     return (
-        Array.from(Array(11), () =>
-            new Array(11).fill([0])
-        )
+        // Array.from(Array(11), () => 
+        //   new Array(11).fill([0])
+        // )
+        mapLst
     )
 }
 
 const Map = () => {
     return (
-        <div>test</div>
-        // <div className="map-wrapper">
-        //     {createMap().map(row => row.map((cell, x) => <Cell key={x} type={cell[0]} />))}
-        // </div>
+        <div className="map-wrapper">
+            {createMap().map(row => row.map((cell: number, x: number) => <Cell key={x} kind={cell} />))}
+        </div>
     )
 }
 
@@ -37,4 +49,4 @@ function Stage1() {
     )
 }
 
-export default Stage1;
+export default Stage1
