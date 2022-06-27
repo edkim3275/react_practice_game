@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function StageSelect() {
+const StageSelect: React.FC = () => {
   return (
     <div>
       <h1>stage select</h1>

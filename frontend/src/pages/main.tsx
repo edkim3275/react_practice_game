@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Main() {
+const Main: React.FC = () => {
   return (
     <div>
       <h1>main page</h1>
