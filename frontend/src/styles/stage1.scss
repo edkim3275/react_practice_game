@@ -33,7 +33,7 @@
     11, 1fr
   );
   grid-gap: 1px;
-  border: 2px solid #333;
+  border: 1px solid #333;
   width: 100%;
   max-width: 25vw;
   background-color: #111;
@@ -48,4 +48,32 @@
   border-right-color: rgba(170, 216, 255, 1);
   border-top-color: rgba(170, 216, 255, 1);
   border-left-color: rgba(170, 216, 255, 0.3);
+}
+.obstacle {
+  width: auto;
+  background: rgba(36, 95, 223, 0.8);
+  border: 1.1vw solid;
+  border-bottom-color: rgba(36, 95, 223, 0.1);
+  border-right-color: rgba(36, 95, 223, 1);
+  border-top-color: rgba(36, 95, 223, 1);
+  border-left-color: rgba(36, 95, 223, 0.3);
+}
+
+.start-area {
+  width: auto;
+  background: rgba(223, 173, 36, 0.8);
+  border: 1.1vw solid;
+  border-bottom-color: rgba(223, 173, 36, 0.1);
+  border-right-color: rgba(223, 173, 36, 1);
+  border-top-color: rgba(223, 173, 36, 1);
+  border-left-color: rgba(223, 173, 36, 0.3);
+}
+
+.color {
+  background: rgba(132, 61, 198);
+  background: rgba(80, 227, 230);
+  background: rgba(36, 95, 223);
+  background: rgba(223, 173, 36);
+  background: rgba(48, 211, 56);
+  background: rgba(227, 78, 78);
 }
