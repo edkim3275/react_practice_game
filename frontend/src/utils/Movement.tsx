@@ -14,7 +14,7 @@ export function useKey(cb: Function) {
 
     useEffect(() => {
         function handle(event: KeyboardEvent) {
-
+            event.preventDefault();
             switch (event.code) {
                 case 'ArrowDown':
                     callbackRef.current((state: { x: number, y: number }) => ({ ...state, y: state.y + 5 }));
