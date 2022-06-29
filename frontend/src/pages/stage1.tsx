@@ -31,9 +31,13 @@ type Props = {
 
 const Map = ({ children }: Props) => {
     return (
-        <div className="map-wrapper">
-            {children}
-            {createMap().map(row => row.map((cell: number, x: number) => <Cell key={x} kind={cell} />))}
+        <div>
+            <div style={{position: "absolute", zIndex: 1}}>
+                {children}
+            </div>
+            <div className="map-wrapper">
+                {createMap().map(row => row.map((cell: number, x: number) => <Cell key={x} kind={cell} />))}
+            </div>
         </div>
     )
 }
@@ -48,16 +52,14 @@ function Stage1() {
         <div className="stage1-wrapper">
             <h2>welcome to stage1</h2>
             <div className="stage1-container">
-                <Map >
+                <Map>
                     <Character x={position.x} y={position.y} />
-
                 </Map>
                 <aside>
                     <div>
                         <Link to="/">home</Link>
                     </div>
                 </aside>
-
             </div>
         </div>
     )
