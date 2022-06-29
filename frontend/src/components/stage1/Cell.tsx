@@ -14,7 +14,6 @@ const Cell: React.FC<Props> = ({ kind }) => {
       return <div className="start-area"></div>;
     default:
       return <div className="cell"></div>;
-      break;
   }
 }
 

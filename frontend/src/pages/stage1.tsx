@@ -6,7 +6,7 @@ import { useKey } from "../utils/Movement";
 
 const createMap = () => {
     const n = 11;
-    let mapLst = new Array;
+    let mapLst: number[][] = [];
     for (let i = 0; i < n; i++) {
         let line = [];
         for (let j = 0; j < n; j++) {
@@ -32,10 +32,7 @@ type Props = {
 const Map = ({ children }: Props) => {
     return (
         <div className="map-wrapper">
-            <div>
-
-                {children}
-            </div>
+            {children}
             {createMap().map(row => row.map((cell: number, x: number) => <Cell key={x} kind={cell} />))}
         </div>
     )
