@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Cell from "../components/stage1/Cell";
+import Character from "../components/Charactor";
+import { useKey } from "../utils/Movement";
 
 const createMap = () => {
     const n = 11;
@@ -23,9 +25,17 @@ const createMap = () => {
     )
 }
 
-const Map = () => {
+type Props = {
+    children?: JSX.Element,
+}
+
+const Map = ({ children }: Props) => {
     return (
         <div className="map-wrapper">
+            <div>
+
+                {children}
+            </div>
             {createMap().map(row => row.map((cell: number, x: number) => <Cell key={x} kind={cell} />))}
         </div>
     )
@@ -33,11 +43,18 @@ const Map = () => {
 
 function Stage1() {
 
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+
+    useKey(setPosition);
+
     return (
         <div className="stage1-wrapper">
             <h2>welcome to stage1</h2>
             <div className="stage1-container">
-                <Map />
+                <Map >
+                    <Character x={position.x} y={position.y} />
+
+                </Map>
                 <aside>
                     <div>
                         <Link to="/">home</Link>
