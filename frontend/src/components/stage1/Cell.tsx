@@ -12,6 +12,8 @@ const Cell: React.FC<Props> = ({ kind }) => {
       return <div className="obstacle"></div>;
     case 2:
       return <div className="start-area"></div>;
+    case 3:
+      return <div className="character"></div>;
     default:
       return <div className="cell"></div>;
   }
