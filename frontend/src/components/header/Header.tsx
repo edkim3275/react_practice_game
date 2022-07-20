@@ -3,9 +3,13 @@ import React from "react";
 const Header = () => {
     return (
         <div>
-
-            <header >
-                <h2>hi good</h2>
+            <header>
+                <button className="header-btn" onClick={() => {
+                    console.log('go home')
+                }}>Home</button>
+                <button className="header-btn stage" onClick={() => {console.log('state')}}>
+                    <span>stage</span>
+                </button>
             </header>
         </div>
     )
