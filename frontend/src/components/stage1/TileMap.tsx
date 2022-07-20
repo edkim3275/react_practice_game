@@ -10,7 +10,7 @@ export class TileMap {
   }
   image(fileName : string) {
     const img = new Image();
-    img.src = require(`../assets/${fileName}`);
+    img.src = require(`../../assets/${fileName}`);
     return img;
   }
   // 0 - empty
@@ -70,7 +70,6 @@ export class TileMap {
   }
 
   drawMap(ctx : CanvasRenderingContext2D) {
-    // console.log('draw!')
       for(let row = 0; row< this.map.length; row++) {
           for(let column = 0; column < this.map[row].length; column++) {
               const tile = this.map[row][column];
@@ -94,12 +93,6 @@ export class TileMap {
                     }
                     break;
               }
-            //   if (image != null) {
-            //       ctx.drawImage(
-            //         image,
-            //         0, 64, 32, 32,
-            //         column * this.tileSize, row * this.tileSize, 32, 32);
-            //   }
           }
       }
   }
