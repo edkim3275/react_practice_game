@@ -10,8 +10,7 @@ function Router() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={< Main />} />
-                < Route path="/stage" element={< StageSelector />} >
-                </Route>
+                <Route path="/stage" element={< StageSelector />} />
                 <Route path="stage/1" element={< Stage1 />} />
                 <Route path="/test" element={<Test />} />
                 <Route path="*" element={<div>error</div>} />
