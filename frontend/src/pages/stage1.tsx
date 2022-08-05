@@ -79,7 +79,9 @@ function Stage1() {
                     ? <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                         <span>stageComplete! go to the next stage</span>
                         <button style={{display: "block"}} onClick={()=>{
-                            navigate("/stage");
+                            navigate("/stage/2", {
+                                state: keyPressCount
+                            });
                         }}>
                             go
                         </button>
