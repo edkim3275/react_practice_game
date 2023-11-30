@@ -16,6 +16,7 @@ function Stage1() {
     const [ playerCanMove, setPlayerCanMove ] = useState(true);
     const [ stageComplete, setStageComplete ] = useState(false);
     const [ keyPressCount, setKeyPressCount ] = useState(0);
+        // character 자체는 숫자로 표현해도 괜찮을 듯.
     const [ charType, setCharType] = useState('char-1')
     const [ charIsSelected, setCharIsSelected ] = useState(false);
     const [ stageClear, setStageClear ] = useState(false);
