@@ -120,7 +120,6 @@
 }
 
 
-
 .char-2 {
   background: url('../assets/Character_001.png') no-repeat;
   width: 48px;
@@ -158,4 +157,101 @@
   position: absolute;
   bottom: 20px;
   left: 160px;
+}
+
+@keyframes run {
+  to {
+    background-position: -1900px 0px;
+  }
+}
+
+.horse-card {
+  width: 375px;
+  height: 199px;
+  border: #444 3px solid;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.horse-card:hover {
+  background-color: rgba(106, 97, 141, 0.7);
+}
+
+.card-background {
+  width: 329px;
+  height: 199px;
+  background-color: #000;
+  border-radius: 20px;
+}
+
+.card-background:hover {
+  width: 329px;
+  height: 199px;
+  background-color: rgba(252, 252, 252, 0.3);
+  border-radius: 20px;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.horse-0 {
+  background: url('../assets/blueHorse.png') no-repeat;
+  max-width: 100px;
+  height: 100px;
+  background-position: 0px 0px;
+  background-color: transparent;
+  animation: run 1.0s infinite steps(19);
+  flex: 1;
+  margin: 0 12px;
+}
+
+.horse-1 {
+  background: url('../assets/yellowHorse.png') no-repeat;
+  max-width: 100px;
+  height: 100px;
+  background-position: 0px 0px;
+  background-color: transparent;
+  animation: run 1.0s infinite steps(19);
+  flex: 1;
+  margin: 0 12px;
+}
+
+.horse-2 {
+  background: url('../assets/skyblueHorse.png') no-repeat;
+  max-width: 100px;
+  height: 100px;
+  background-position: 0px 0px;
+  background-color: transparent;
+  animation: run 1.0s infinite steps(19);
+  flex: 1;
+  margin: 0 12px;
+}
+
+.horse-3 {
+  background: url('../assets/indigoHorse.png') no-repeat;
+  max-width: 100px;
+  height: 100px;
+  background-position: 0px 0px;
+  background-color: transparent;
+  animation: run 1.0s infinite steps(19);
+  flex: 1;
+  margin: 0 12px;
+}
+
+.horse-info {
+  flex: 1;
+  color: rgb(179, 212, 255);
+}
+.horse-info span {
+  display: block;
+  padding-bottom: 5px;
+}
+
+p {
+  margin-bottom: 5px;
+  word-spacing: -10px;
 }
